@@ -1170,47 +1170,24 @@ body::before {
 .contact-section {
     text-align: center;
     margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    color: var(--text-primary);
 }
 
-.contact-info {
-    color: var(--text-primary);
+.contact-line {
     font-size: 1.1rem;
+    line-height: 2;
+    margin: 0.5rem 0;
 }
 
-.connect-text {
-    color: var(--text-primary);
-    font-size: 1.1rem;
-    margin: 1rem 0;
-}
-
-.social-buttons {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.social-button {
-    color: var(--text-primary);
+.contact-line a {
+    color: var(--primary);
     text-decoration: none;
-    font-size: 1.1rem;
-    padding: 0.5rem 2rem;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.social-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
-.separator {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
+.contact-line a:hover {
+    color: var(--accent);
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -1219,32 +1196,16 @@ body::before {
         padding: 0 1rem;
     }
 
-    .contact-info, .connect-text, .social-button {
+    .contact-line {
         font-size: 1rem;
-    }
-
-    .social-button {
-        padding: 0.5rem 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-info p {
+    .contact-line {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-    }
-
-    .social-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .separator {
-        display: none;
-    }
-
-    .social-button {
-        width: 200px;
+        line-height: 1.8;
     }
 } 
