@@ -11,19 +11,28 @@
     --accent: #8b5cf6;
     --glass: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
-    --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+    --gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+    --card-bg: rgba(45, 55, 72, 0.5);
+    --nav-bg: rgba(26, 32, 44, 0.95);
+    --shadow: rgba(0, 0, 0, 0.2);
     --light: #ffffff;
     --dark: #1a1a1a;
 }
 
 /* Light theme variables */
 [data-theme="light"] {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f7fafc;
-    --text-primary: #1a1a1a;
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --text-primary: #1a202c;
     --text-secondary: #4a5568;
+    --primary: #4f46e5;
+    --accent: #7c3aed;
     --glass: rgba(0, 0, 0, 0.05);
     --glass-border: rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* Global styles */
@@ -70,6 +79,12 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="light"] #particles-js {
+  opacity: 0.3;
 }
 
 /* Hero section */
@@ -98,7 +113,7 @@ body::before {
     font-weight: 800;
     line-height: 1.1;
     margin: 0;
-    background: linear-gradient(135deg, var(--accent), var(--primary));
+    background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: pulse 3s ease-in-out infinite;
@@ -413,10 +428,11 @@ body::before {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 42, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 0.5rem;
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .nav-content {
@@ -430,7 +446,7 @@ body::before {
 }
 
 .nav-link {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-decoration: none;
     padding: 0.35rem 0.5rem;
     border-radius: 6px;
@@ -442,8 +458,9 @@ body::before {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--light);
+    color: var(--primary);
     background: var(--glass);
+    border-bottom-color: var(--primary);
 }
 
 @media (max-width: 768px) {
@@ -762,19 +779,39 @@ body::before {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     border-radius: 12px;
     transition: all 0.3s ease;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 6px var(--shadow);
 }
 
 .skill-item:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-secondary);
+    border-color: var(--primary);
+    box-shadow: 0 8px 15px var(--shadow),
+                0 0 0 1px var(--primary);
 }
 
 .skill-item i {
     font-size: 1.5rem;
     color: var(--primary);
+}
+
+.skill-item:hover i {
+    color: var(--accent);
+}
+
+.skill-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover span {
+    color: var(--accent);
 }
 
 /* Contact section */
@@ -1268,9 +1305,9 @@ footer {
 
 /* Theme toggle button */
 .theme-toggle {
-    background: transparent;
-    border: none;
+    background: var(--glass);
     color: var(--text-primary);
+    border: 1px solid var(--glass-border);
     cursor: pointer;
     padding: 0.5rem;
     font-size: 1.2rem;
@@ -1285,7 +1322,8 @@ footer {
 }
 
 .theme-toggle:hover {
-    background: var(--glass);
+    background: var(--primary);
+    color: var(--bg-primary);
     transform: scale(1.1);
 }
 
