@@ -227,38 +227,4 @@ skillBadges.forEach(badge => {
     badge.addEventListener('mouseout', function() {
         this.style.transform = 'scale(1)';
     });
-});
-
-// Theme toggle functionality
-function initTheme() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const storedTheme = localStorage.getItem('theme');
-    
-    // Set initial theme
-    if (storedTheme) {
-        document.documentElement.setAttribute('data-theme', storedTheme);
-        updateThemeIcon(storedTheme);
-    } else if (prefersDark) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        updateThemeIcon('dark');
-    }
-    
-    // Toggle theme on button click
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
-}
-
-function updateThemeIcon(theme) {
-    const themeIcon = document.querySelector('#theme-toggle i');
-    themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-}
-
-// Initialize theme when DOM is loaded
-document.addEventListener('DOMContentLoaded', initTheme); 
+}); 

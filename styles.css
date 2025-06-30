@@ -2,13 +2,12 @@
 
 /* Modern Animated Theme */
 :root {
-    /* Dark theme variables (default) */
+    --primary: #6366f1;
+    --accent: #8b5cf6;
     --bg-primary: #1f2d3d;
     --bg-secondary: #2d3f50;
     --text-primary: #ffffff;
     --text-secondary: #a0aec0;
-    --primary: #6366f1;
-    --accent: #8b5cf6;
     --glass: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
@@ -17,22 +16,6 @@
     --shadow: rgba(0, 0, 0, 0.2);
     --light: #ffffff;
     --dark: #1a1a1a;
-}
-
-/* Light theme variables */
-[data-theme="light"] {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f0f4f8;
-    --text-primary: #2d3748;
-    --text-secondary: #4a5568;
-    --primary: #2563eb;    /* Bright Blue */
-    --accent: #0ea5e9;     /* Sky Blue */
-    --glass: rgba(37, 99, 235, 0.05);
-    --glass-border: rgba(37, 99, 235, 0.1);
-    --gradient: linear-gradient(135deg, #2563eb, #0ea5e9);
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --nav-bg: rgba(255, 255, 255, 0.95);
-    --shadow: rgba(37, 99, 235, 0.1);
 }
 
 /* Global styles */
@@ -440,27 +423,23 @@ body::before {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: nowrap;
-    padding: 0;
+    gap: 2rem;
 }
 
 .nav-link {
     color: var(--text-primary);
     text-decoration: none;
     padding: 0.35rem 0.5rem;
-    border-radius: 6px;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
-    font-weight: 500;
-    white-space: nowrap;
-    font-size: 0.9rem;
+    position: relative;
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary);
     background: var(--glass);
-    border-bottom-color: var(--primary);
 }
 
 @media (max-width: 768px) {
@@ -775,19 +754,20 @@ body::before {
 }
 
 .skill-item {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 6px var(--shadow);
+    border-radius: 15px;
+    padding: 1.2rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
-    background: var(--card-bg);
-    border-radius: 12px;
     transition: all 0.3s ease;
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 4px 6px var(--shadow);
+    cursor: pointer;
 }
 
 .skill-item:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
     background: var(--bg-secondary);
     border-color: var(--primary);
     box-shadow: 0 8px 15px var(--shadow),
@@ -797,10 +777,12 @@ body::before {
 .skill-item i {
     font-size: 1.5rem;
     color: var(--primary);
+    transition: all 0.3s ease;
 }
 
 .skill-item:hover i {
     color: var(--accent);
+    transform: scale(1.2) rotate(5deg);
 }
 
 .skill-item span {
