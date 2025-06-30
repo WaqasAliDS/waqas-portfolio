@@ -1338,4 +1338,194 @@ footer {
 [data-theme="light"] .theme-toggle:hover {
     background: var(--gradient);
     color: white;
+}
+
+/* About page styles */
+.about-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.profile-section {
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.section-subtitle i {
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+/* Education section */
+.education-section {
+    margin-bottom: 3rem;
+}
+
+.education-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+    border-color: var(--primary);
+}
+
+.education-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.education-card p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.education-year {
+    margin-top: 0.5rem;
+    font-size: 1rem !important;
+    color: var(--accent) !important;
+}
+
+/* About text */
+.about-text-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* Expertise cards */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.expertise-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+    border-color: var(--primary);
+}
+
+.expertise-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.expertise-card:hover i {
+    transform: scale(1.1) rotate(5deg);
+    color: var(--accent);
+}
+
+.expertise-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.expertise-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Certifications section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-main {
+        padding: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.75rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .education-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .expertise-card {
+        padding: 1.5rem;
+    }
+
+    .expertise-card h3 {
+        font-size: 1.3rem;
+    }
 } 
