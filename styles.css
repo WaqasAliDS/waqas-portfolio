@@ -2,17 +2,28 @@
 
 /* Modern Animated Theme */
 :root {
+    /* Dark theme variables (default) */
+    --bg-primary: #1f2d3d;
+    --bg-secondary: #2d3f50;
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
     --primary: #6366f1;
-    --secondary: #8b5cf6;
-    --accent: #06b6d4;
-    --dark: #0f172a;
-    --darker: #020617;
-    --light: #ffffff;
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --accent: #8b5cf6;
     --glass: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
+    --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+    --light: #ffffff;
+    --dark: #1a1a1a;
+}
+
+/* Light theme variables */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f7fafc;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a5568;
+    --glass: rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(0, 0, 0, 0.1);
 }
 
 /* Global styles */
@@ -23,7 +34,7 @@
 }
 
 body {
-    background: var(--dark);
+    background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -31,6 +42,7 @@ body {
     position: relative;
     overflow-x: hidden;
     padding-top: 4rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body::before {
@@ -1031,34 +1043,70 @@ footer {
     display: flex;
     align-items: center;
     gap: 1rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-                0 0 20px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(99, 102, 241, 0.3);
     border-color: rgba(99, 102, 241, 0.5);
 }
 
 .skill-item i {
     font-size: 1.5rem;
     color: var(--primary);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skill-item:hover i {
     color: var(--accent);
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(5deg);
+    animation: iconPulse 1s infinite;
 }
 
 .skill-item span {
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover span {
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+/* Add new animations */
+@keyframes iconPulse {
+    0% { transform: scale(1.2) rotate(5deg); }
+    50% { transform: scale(1.4) rotate(-5deg); }
+    100% { transform: scale(1.2) rotate(5deg); }
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.skill-item:hover::before {
+    left: 100%;
 }
 
 /* Responsive adjustments for skills */
@@ -1216,4 +1264,35 @@ footer {
         gap: 0.5rem;
         line-height: 1.8;
     }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.theme-toggle:hover {
+    background: var(--glass);
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(45deg);
 } 
