@@ -1410,19 +1410,94 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+/* Education section */
+.education-section {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.education-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.education-details {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem auto;
+}
+
+.education-details h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.education-details p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Areas of Expertise */
+.expertise-section {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.expertise-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.expertise-item {
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.expertise-item h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.expertise-item i {
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.expertise-item p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* CV Download button */
 .cv-download-container {
-    margin: 1rem auto 3rem;
+    margin: 2rem auto;
     text-align: center;
 }
 
 .cv-download-btn {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     color: white;
-    padding: 1rem 2.5rem;
+    padding: 0.875rem 2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
@@ -1450,33 +1525,62 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .about-main {
+        padding: 1rem;
+    }
+
     .hero-title {
         font-size: 2.5rem;
-    }
-
-    .about-text {
-        font-size: 1.1rem;
-        padding: 0 1rem;
-    }
-
-    .cv-download-btn {
-        padding: 0.875rem 2rem;
-        font-size: 1.1rem;
     }
 
     .hero-header::after {
         width: 80px;
         height: 3px;
+        bottom: -0.75rem;
     }
-}
 
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
+    .about-content {
+        gap: 2rem;
     }
 
     .about-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .education-section h2,
+    .expertise-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .education-details {
+        padding: 1.5rem;
+        margin: 0.75rem auto;
+    }
+
+    .education-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .education-details p {
         font-size: 1rem;
+    }
+
+    .expertise-item {
+        margin: 1.5rem 0;
+    }
+
+    .expertise-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .expertise-item p {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     .cv-download-btn {
@@ -1485,66 +1589,40 @@ footer {
     }
 }
 
-/* CV Download section */
-.cv-section {
-    text-align: center;
-    margin: 3rem auto;
-    max-width: 600px;
-}
+@media (max-width: 480px) {
+    .about-main {
+        padding: 0.75rem;
+    }
 
-.cv-download-container {
-    margin: 0 auto 4rem;
-    text-align: center;
-    position: relative;
-}
+    .hero-title {
+        font-size: 2rem;
+    }
 
-.cv-download-btn {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.2rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
+    .hero-header {
+        margin-bottom: 2rem;
+    }
 
-.cv-download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    background: transparent;
-    border-color: var(--primary);
-    color: var(--primary);
-}
+    .about-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
 
-.cv-download-btn i {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-}
+    .education-section h2,
+    .expertise-section h2 {
+        font-size: 1.5rem;
+    }
 
-.cv-download-btn:hover i {
-    transform: translateY(2px);
-}
+    .education-details {
+        padding: 1.25rem;
+    }
 
-.cv-hint {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .cv-section {
-        margin: 2rem auto;
+    .expertise-item {
+        margin: 1.25rem 0;
+        padding: 0 0.5rem;
     }
 
     .cv-download-btn {
         padding: 0.625rem 1.5rem;
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 } 
