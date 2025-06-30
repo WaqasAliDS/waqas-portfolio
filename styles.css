@@ -1382,7 +1382,8 @@ footer {
 
 /* Education section */
 .education-section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
 }
 
 .education-card {
@@ -1422,7 +1423,7 @@ footer {
 /* About text */
 .about-text-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
     text-align: center;
 }
 
@@ -1618,18 +1619,19 @@ footer {
 }
 
 .cv-download-container {
-    margin: 2rem auto;
+    margin: 0 auto 4rem;
     text-align: center;
+    position: relative;
 }
 
 .cv-download-btn {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     color: white;
-    padding: 0.75rem 2rem;
+    padding: 1rem 2.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
