@@ -1618,17 +1618,14 @@ footer {
 }
 
 .cv-download-container {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    margin: 2rem auto;
+    text-align: center;
 }
 
 .cv-download-btn {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     color: white;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -1638,12 +1635,12 @@ footer {
     gap: 0.75rem;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .cv-download-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     background: transparent;
     border-color: var(--primary);
     color: var(--primary);
@@ -1671,7 +1668,7 @@ footer {
     }
 
     .cv-download-btn {
-        padding: 0.875rem 1.75rem;
+        padding: 0.625rem 1.5rem;
         font-size: 1rem;
     }
 } 
