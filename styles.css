@@ -210,32 +210,33 @@ body::before {
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .section-header i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #8B5CF6;
+    margin-right: 0.5rem;
 }
 
 .section-title {
     font-size: 2.5rem;
     color: #fff;
-    margin-bottom: 0;
+    margin: 0;
     position: relative;
-    display: inline-block;
     padding-bottom: 1rem;
+    display: inline-block;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
     height: 4px;
     background: linear-gradient(90deg, #8B5CF6 50%, transparent);
@@ -245,12 +246,14 @@ body::before {
 /* For main About Me title */
 .about-section .section-title {
     margin-bottom: 2rem;
+    text-align: center;
+    display: inline-block;
 }
 
 .about-section .section-title::after {
-    left: 0;
-    transform: none;
-    background: linear-gradient(90deg, #8B5CF6, transparent);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 /* Education section */
@@ -1939,4 +1942,71 @@ footer {
     .about-text {
         font-size: 0.95rem;
     }
+}
+
+/* About Me Section */
+.about-section {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-section .section-title {
+    margin-bottom: 2rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.about-section .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.section-header i {
+    font-size: 2.5rem;
+    color: #8B5CF6;
+    margin-right: 0.5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0;
+    position: relative;
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8B5CF6 50%, transparent);
+    border-radius: 2px;
+}
+
+/* Section Container Styles */
+.education-section,
+.expertise-section,
+.certifications-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
 } 
