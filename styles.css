@@ -70,19 +70,72 @@ body::before {
   opacity: 0.3;
 }
 
-/* Hero Section */
-.hero-section {
+/* Common Card Styles */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     text-align: center;
-    padding: 4rem 2rem;
-    background: var(--glass);
-    border-bottom: 1px solid var(--glass-border);
-    margin-bottom: 4rem;
+}
+
+/* Main content styles */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero section styles */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-section {
+    margin-bottom: 2rem;
+}
+
+.profile-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #f97316;
+    padding: 4px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
+    font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     position: relative;
     display: inline-block;
 }
@@ -95,91 +148,144 @@ body::before {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: var(--gradient);
+    background: var(--accent);
     border-radius: 4px;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
+.hero-subtitle {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
-.about-text {
+.hero-description {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.expertise-text {
     color: var(--text-secondary);
     font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Education Section */
+/* Main skills section */
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 1000px;
+}
+
+.skill-item {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.skill-item span {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Section headers */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-header i {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+/* Education section */
 .education-section {
-    max-width: 1200px;
-    margin: 0 auto 4rem;
-    padding: 0 2rem;
+    margin: 4rem auto;
+    text-align: center;
+    max-width: 1000px;
 }
 
 .education-card {
     background: var(--glass);
     border: 1px solid var(--glass-border);
     border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
     max-width: 600px;
     margin: 0 auto;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--shadow);
-    border-color: var(--primary);
 }
 
 .education-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
 .institution {
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .year {
-    color: var(--primary);
-    font-weight: 500;
+    color: var(--accent);
+    font-size: 1.1rem;
 }
 
-/* Section Titles */
-.section-title {
-    font-size: 2.5rem;
-    color: var(--text-primary);
-    margin-bottom: 2rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.section-title i {
-    color: var(--primary);
-}
-
-/* Expertise Section */
+/* Areas of Expertise */
 .expertise-section {
-    max-width: 1400px;
-    margin: 0 auto 4rem;
-    padding: 0 2rem;
+    margin: 4rem auto;
+    text-align: center;
+    max-width: 1200px;
 }
 
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    margin: 0 auto;
 }
 
 .expertise-card {
@@ -187,30 +293,17 @@ body::before {
     border: 1px solid var(--glass-border);
     border-radius: 15px;
     padding: 2rem;
-    text-align: center;
     backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.expertise-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--shadow);
-    border-color: var(--primary);
+    align-items: center;
 }
 
 .expertise-card i {
     font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.expertise-card:hover i {
     color: var(--accent);
+    margin-bottom: 1rem;
 }
 
 .expertise-card h3 {
@@ -221,188 +314,83 @@ body::before {
 
 .expertise-card p {
     color: var(--text-secondary);
-    line-height: 1.6;
     font-size: 1.1rem;
-}
-
-/* Certifications Section */
-.certifications-section {
-    max-width: 1400px;
-    margin: 0 auto 4rem;
-    padding: 0 2rem;
-}
-
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.certification-card {
-    background: var(--glass);
-    border: 1px solid var(--glass-border);
-    border-radius: 15px;
-    padding: 2rem;
     text-align: center;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.certification-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px var(--shadow);
-    border-color: var(--primary);
-}
-
-.certification-card i {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.certification-card:hover i {
-    color: var(--accent);
-}
-
-.certification-card h3 {
-    font-size: 1.3rem;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-    line-height: 1.4;
-}
-
-.cert-issuer {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.cert-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--primary);
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    margin-top: auto;
-}
-
-.cert-link:hover {
-    background: rgba(139, 92, 246, 0.2);
-    color: var(--accent);
-    transform: translateY(-2px);
-}
-
-/* Download Resume Button */
-.cv-download-container {
-    margin-top: 3rem;
-}
-
-.cv-download-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 2rem;
-    background: var(--gradient);
-    color: var(--text-primary);
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cv-download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-}
-
-/* Responsive Design */
+/* Responsive design */
 @media (max-width: 1200px) {
-    .expertise-grid,
-    .certifications-grid {
+    .expertise-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .expertise-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
-    .hero-section {
-        padding: 3rem 1rem;
+    .hero {
+        padding: 2rem 0;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
-    .about-text {
-        font-size: 1.1rem;
-        text-align: left;
+    .hero-subtitle {
+        font-size: 1.75rem;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+    }
+
+    .tech-stack,
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .section-title {
         font-size: 2rem;
     }
 
-    .expertise-grid,
-    .certifications-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .expertise-card,
-    .certification-card {
-        padding: 1.5rem;
-    }
-
-    .expertise-card i,
-    .certification-card i {
-        font-size: 2rem;
-    }
-
-    .cv-download-btn {
-        padding: 0.875rem 1.75rem;
-        font-size: 1rem;
+    .education-card {
+        padding: 2rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-section {
-        padding: 2rem 1rem;
-    }
-
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    .about-text {
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .expertise-text {
         font-size: 1rem;
     }
 
-    .section-title {
-        font-size: 1.75rem;
+    .tech-stack,
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    .expertise-card h3,
-    .certification-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .expertise-card p {
-        font-size: 1rem;
-    }
-
-    .cert-link {
-        padding: 0.625rem 1.25rem;
-        font-size: 0.85rem;
+    .skill-item,
+    .expertise-card {
+        padding: 1.5rem;
     }
 }
 
