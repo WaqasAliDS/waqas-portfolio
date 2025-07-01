@@ -2323,4 +2323,58 @@ footer {
     .tech-tag {
         font-size: 0.8rem;
     }
+}
+
+/* Contact page specific styles */
+.text-gradient {
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-section {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-content {
+    position: relative;
+}
+
+.contact-info,
+.contact-form-container {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover,
+.contact-form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-container form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-info,
+    .contact-form-container {
+        padding: 1.5rem;
+    }
 } 

@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Muhammad Waqas Ali - AI and Data Science Professional">
     <title>Contact - Muhammad Waqas Ali</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body class="bg-[#1f2d3d] text-white">
+    <!-- Particles.js Container -->
+    <div id="particles-js" class="absolute inset-0"></div>
+
     <nav class="nav-container">
         <div class="nav-content">
             <a href="index.html" class="nav-link">Home</a>
@@ -18,67 +35,119 @@
         </div>
     </nav>
 
-    <main class="container">
-        <div class="contact-section">
-            <h1 class="section-title">Get in Touch</h1>
+    <main class="container mx-auto px-4 py-8">
+        <div class="contact-section max-w-6xl mx-auto">
+            <h1 class="section-title text-center mb-12">Get in Touch</h1>
             
-            <div class="contact-content">
-                <p class="contact-text">
-                    I'm always interested in hearing about new projects and opportunities. 
-                    Whether you have a question or just want to say hi, I'll try my best 
-                    to get back to you!
-                </p>
+            <div class="contact-content grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="contact-info bg-[#2d3f50] rounded-2xl p-8 backdrop-blur-lg border border-[rgba(255,255,255,0.1)]">
+                    <h2 class="text-2xl font-bold mb-6 text-gradient">Let's Connect</h2>
+                    <p class="text-gray-300 mb-8">
+                        I'm always excited to collaborate on innovative AI and Data Science projects. 
+                        Whether you have a specific project in mind or just want to explore possibilities, 
+                        I'm here to help turn your ideas into reality.
+                    </p>
 
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:aliayubi167@gmail.com" class="contact-link">
-                            aliayubi167@gmail.com
-                        </a>
-                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-[rgba(99,102,241,0.2)] flex items-center justify-center">
+                                <i class="fas fa-envelope text-[#6366f1]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm text-gray-400">Email</h3>
+                                <a href="mailto:aliayubi167@gmail.com" class="text-white hover:text-[#6366f1] transition-colors">
+                                    aliayubi167@gmail.com
+                                </a>
+                            </div>
+                        </div>
 
-                    <div class="contact-card">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+923353470167" class="contact-link">
-                            +92 335 3470167
-                        </a>
-                    </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-[rgba(99,102,241,0.2)] flex items-center justify-center">
+                                <i class="fas fa-phone text-[#6366f1]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm text-gray-400">Phone</h3>
+                                <a href="tel:+923353470167" class="text-white hover:text-[#6366f1] transition-colors">
+                                    +92 335 3470167
+                                </a>
+                            </div>
+                        </div>
 
-                    <div class="contact-card">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://linkedin.com/in/mwaqasali98" target="_blank" class="contact-link">
-                            linkedin.com/in/mwaqasali98
-                        </a>
-                    </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-[rgba(99,102,241,0.2)] flex items-center justify-center">
+                                <i class="fab fa-linkedin text-[#6366f1]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm text-gray-400">LinkedIn</h3>
+                                <a href="https://linkedin.com/in/mwaqasali98" target="_blank" class="text-white hover:text-[#6366f1] transition-colors">
+                                    linkedin.com/in/mwaqasali98
+                                </a>
+                            </div>
+                        </div>
 
-                    <div class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/WaqasAliDS" target="_blank" class="contact-link">
-                            github.com/WaqasAliDS
-                        </a>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-[rgba(99,102,241,0.2)] flex items-center justify-center">
+                                <i class="fab fa-github text-[#6366f1]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm text-gray-400">GitHub</h3>
+                                <a href="https://github.com/WaqasAliDS" target="_blank" class="text-white hover:text-[#6366f1] transition-colors">
+                                    github.com/WaqasAliDS
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-[rgba(99,102,241,0.2)] flex items-center justify-center">
+                                <i class="fab fa-twitter text-[#6366f1]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm text-gray-400">Twitter</h3>
+                                <a href="https://twitter.com/waqasalids" target="_blank" class="text-white hover:text-[#6366f1] transition-colors">
+                                    @waqasalids
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="contact-form-container">
-                    <h2>Send Me a Message</h2>
-                    <form id="contactForm" class="contact-form">
+                <!-- Contact Form -->
+                <div class="contact-form-container bg-[#2d3f50] rounded-2xl p-8 backdrop-blur-lg border border-[rgba(255,255,255,0.1)]">
+                    <h2 class="text-2xl font-bold mb-6 text-gradient">Send a Message</h2>
+                    <form id="contactForm" class="space-y-6">
                         <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name" class="block text-sm text-gray-400 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white focus:outline-none focus:border-[#6366f1] transition-colors"
+                                placeholder="John Doe">
                         </div>
+
                         <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email" class="block text-sm text-gray-400 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white focus:outline-none focus:border-[#6366f1] transition-colors"
+                                placeholder="john@example.com">
                         </div>
+
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject" class="block text-sm text-gray-400 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white focus:outline-none focus:border-[#6366f1] transition-colors"
+                                placeholder="Project Inquiry">
                         </div>
+
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message" class="block text-sm text-gray-400 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-2 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg text-white focus:outline-none focus:border-[#6366f1] transition-colors resize-none"
+                                placeholder="Your message here..."></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Send Message</button>
+
+                        <button type="submit"
+                            class="w-full py-3 px-6 bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#6366f1] focus:ring-opacity-50">
+                            Send Message
+                        </button>
                     </form>
                 </div>
             </div>
@@ -87,10 +156,76 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
+        // Initialize EmailJS
         (function() {
-            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+            emailjs.init("YOUR_PUBLIC_KEY");
         })();
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const btn = event.target.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function() {
+                    alert('Message sent successfully!');
+                    event.target.reset();
+                }, function(error) {
+                    alert('Failed to send message. Please try again.');
+                    console.error('EmailJS error:', error);
+                })
+                .finally(function() {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                });
+        });
+
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#6366f1' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#6366f1',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
     </script>
-    <script src="scripts.js"></script>
 </body>
 </html> 
