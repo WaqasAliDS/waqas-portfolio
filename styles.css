@@ -91,21 +91,21 @@ body::before {
 
 /* Hero section styles */
 .hero {
-    padding: 4rem 0;
-    text-align: center;
+    min-height: calc(100vh - 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .profile-section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .profile-container {
@@ -128,14 +128,13 @@ body::before {
 .text-content {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .hero-title {
     font-size: 4rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
 }
@@ -181,8 +180,8 @@ body::before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin: 3rem auto;
-    max-width: 1000px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .skill-item {
@@ -319,23 +318,9 @@ body::before {
 }
 
 /* Responsive design */
-@media (max-width: 1200px) {
-    .expertise-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .expertise-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-}
-
 @media (max-width: 768px) {
     .hero {
-        padding: 2rem 0;
+        padding: 2rem 1rem;
     }
 
     .hero-title {
@@ -350,18 +335,14 @@ body::before {
         font-size: 1.25rem;
     }
 
-    .tech-stack,
-    .expertise-grid {
+    .tech-stack {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .education-card {
-        padding: 2rem;
+    .expertise-text {
+        font-size: 1.1rem;
+        padding: 0 1rem;
     }
 }
 
@@ -382,14 +363,12 @@ body::before {
         font-size: 1rem;
     }
 
-    .tech-stack,
-    .expertise-grid {
+    .tech-stack {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    .skill-item,
-    .expertise-card {
+    .skill-item {
         padding: 1.5rem;
     }
 }
